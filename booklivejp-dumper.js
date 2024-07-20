@@ -45,13 +45,14 @@ function md_setup_keymgr(){
 }
 
 function md_show_message(message, download_help = false) {
-    let header = "<b>$$$$ BookLiveJP Manga Dumper v1.7 $$$$</b>\n________________________ by Flareonz44\n\n";
+    let header = "<b>$$$$ BookLiveJP Manga Dumper v1.8 $$$$</b>\n________________________ by <a href='https://linktr.ee/flareonz44' target='_blank' rel='noopener noreferrer' style='color: fuchsia;text-decoration: unset;'>Flareonz44</a>\n\n";
+    let footer = "\n\n<small><a href='https://github.com/Flareonz44/booklive-jp-manga-dumper?tab=readme-ov-file#booklivejp-manga-dumper' target='_blank' rel='noopener noreferrer' style='color: aqua;'>Check the README file</a></small>\n";
     msg_buid = header;
     if (download_help){
         if (message.length > 0){message="\n\n"+message;}
-        msg_buid += "Scan finished, " + Object.keys(manga_dumped).length.toString() + " pages saved\n\n>> Press 3 to choose png's<<\n>> Press 4 to download as .zip <<" + message + "\n\n<small>to download a single page use the\n<b>get_page()</b> func in the console:\n<i>get_page(['p1.png']) -> gets page 1</i>\nor <i>get_page(['p1.png','p2.png',...])</i></small>";
+        msg_buid += "Scan finished, " + Object.keys(manga_dumped).length.toString() + " pages saved\n\n>> Press 3 to save all png's <<\n>> Press 4 to download as .zip <<\n>> Use <b>get_pages()</b> <<" + message + footer;
     }else{
-        msg_buid += message;
+        msg_buid += message + footer;
     }
     msg_obj.innerHTML = msg_buid.toString().replaceAll("\n", "<br>");
     msg_obj.style.display = "block";
@@ -91,7 +92,7 @@ function md_merge_blobs(blob_list){
     return canvas.toDataURL();
 }
 
-function get_page(page_list){
+function get_pages(page_list){
     page_list.forEach(page => {
         if (Object.keys(manga_dumped).includes(page)){
             console.log("Downloading " + page + "...");
