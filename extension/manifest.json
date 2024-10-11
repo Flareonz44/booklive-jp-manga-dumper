@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Booklive.jp Manga Dumper",
   "version": "2.1",
-  "description": "Dump your mangas as PNG! A script by Flareonz44",
+  "description": "Dump your mangas as PNG! Script made by Flareonz44",
   "permissions": ["activeTab", "tabs"],
   "background": {
     "service_worker": "assets/background.js"
