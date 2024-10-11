@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Booklive.jp Manga Dumper",
+  "version": "2.1",
+  "description": "Dump your mangas as PNG! A script by Flareonz44",
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "service_worker": "assets/background.js"
+  },
+  "action": {
+    "default_icon": {
+      "128": "assets/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://booklive.jp/bviewer/*"],
+      "js": ["assets/jszip.js", "assets/agent.js"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "assets/bg.png" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "icons": {
+    "128": "assets/icon.png"
+  }
+}
+  
