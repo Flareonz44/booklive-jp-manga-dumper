@@ -20,6 +20,20 @@ I highly recommend pinning it to the toolbar through the jigsaw icon in the tool
 
 ![image](https://github.com/user-attachments/assets/e9e32670-406e-4388-a779-870f78a0d49f)
 
+### Installation errors
+If you followed the instructions and the extension's tile show a message like this:
+
+![image](https://github.com/user-attachments/assets/fb6e77b2-34ec-4fa1-b311-3635d8ba92ce)
+
+Then you have to follow this steps to install it:
+1. Go to [the main page of the repo](https://github.com/Flareonz44/booklive-jp-manga-dumper)
+2. Click on the Green Button labeled `<> Code`, then click on `Download ZIP` and save it
+3. Unzip the file and save the resulting folder in a safe place (where you are not likely to delete it)
+4. In your [Extensions Dashboard](chrome://extensions/) with Dev Mode enabled, click on `Load unpacked`
+5. Navigate to the extracted folder and select the one called `extension`
+
+It should be loaded instantly, so you are ready to start dumping!
+
 
 ## Usage
 
